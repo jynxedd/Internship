@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@400;700&family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #F7F2EB;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 0px;
+    position: relative;
+}
+
+.circle {
+    width: 700px; 
+    height: 510px; 
+    overflow: hidden;
+    background-color: #7096D1; 
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px; 
+    right: -280px;
+    z-index: 0; 
+}
+
+.heroCat {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0px;
+    right: -10px;
+    font-size: 18px;
+  }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color:transparent ;
+    position: absolute;
+    width: 100%;
+    color: #7096D1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+header nav a {
+    color: #7096D1; /* Change the color to your desired font color */
+    font-family: 'Montserrat', sans-serif; /* Change the font family */
+    text-decoration: none; /* Remove underline */
+    margin: 0 15px; /* Add some spacing between links */
+    font-size: 21px; /* Adjust the font size */
+}
+/* Add hover effect */
+header nav a:hover {
+    color: #081F5C; /* Change color when hovered */
+    /*text-decoration: underline;*/
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent; 
+    color: #081F5C;
+    padding: 16px;
+    font-size: 21px;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    cursor: pointer;
+}
+  
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+background-color: #8a9ad5;
+border-radius: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+border-radius: 10px;
+right: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+font-size: 18px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.hero-text {
+    max-width: 50%; /* Adjust width as needed */
+    position: absolute;
+    float: none;
+    left: 50px;
+    top: 200px;
+}
+
+.hero-text h1 {
+    font-size: 6em;
+    font-family: 'Montserrat', sans-serif;
+    color: #081F5C;
+}
+
+.hero-text h2 {
+    font-size: 4em;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    color: #081F5C;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    color: #081F5C;
+    padding-top: 5px;
+}
+
+/* @media (max-width: 300px) {
+    .circle {
+        max-width: 100%;
+    }
+    .heroCat {
+        max-width: 100%;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+} */
+
+.about {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F7F2EB;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 100px;
+    position: relative;
+}
+
+.rectContainer {
+    height:600px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.rectangle {
+    width: 850px;
+    height: 500px;
+    background-color: #081F5C;
+    border-radius: 50px;
+    z-index: 0; 
+    text-align: right;
+}
+
+.about-text {
+    max-width: 50%; 
+    position: relative;
+    right: 90px;
+    top: 20px;
+}
+
+.about-text h1 {
+    font-size: 5em;
+    font-family: 'Montserrat', sans-serif;
+    color: #f1f1f1;
+    font-weight: normal;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 1em;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    color: #f1f1f1;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.hummingBird {
+    position: relative;
+    /* left: 0px;
+    font-size: 18px; */
+}
+
+.aboutContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .rectangle {
+        width: 90%;
+        height: auto;
+    }
+
+    .about-text {
+        max-width: 90%;
+        right: 5%;
+        top: 10px;
+    }
+
+    .about-text h1 {
+        font-size: 3em;
+    }
+
+    .about-text p {
+        font-size: 0.9em;
+    }
+}
+
+/* Media query for extra small screens */
+@media (max-width: 480px) {
+    .rectangle {
+        width: 95%;
+        height: auto;
+    }
+
+    .about-text {
+        max-width: 95%;
+        right: 2.5%;
+        top: 10px;
+    }
+
+    .about-text h1 {
+        font-size: 2.5em;
+    }
+
+    .about-text p {
+        font-size: 0.8em;
+    }
+}
+
+.contact {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F7F2EB;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.contactRect1 {
+    width: 500px;
+    height: 300px;
+    background-color: #7096D1;
+    border-radius: 50px;
+    z-index: 0; 
+    text-align: right;
+}
+
+.contactRect2 {
+    width: 500px;
+    height: 300px;
+    background-color: #081F5C;
+    border-radius: 50px;
+    z-index: 0; 
+    text-align: right;
+}
+
+.contactContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contactUsText {
+    display: flex;
+    text-align: left;
+    margin-left: 50px;
+    font-family: 'Montserrat', sans-serif;
+    color: #081F5C;
+}
