@@ -51,19 +51,17 @@ header {
     font-size: 20px;
 }
 header nav a {
-    color: #7096D1; /* Change the color to your desired font color */
-    font-family: 'Montserrat', sans-serif; /* Change the font family */
-    text-decoration: none; /* Remove underline */
-    margin: 0 15px; /* Add some spacing between links */
-    font-size: 21px; /* Adjust the font size */
-}
-/* Add hover effect */
-header nav a:hover {
-    color: #081F5C; /* Change color when hovered */
-    /*text-decoration: underline;*/
+    color: #7096D1; 
+    font-family: 'Montserrat', sans-serif; 
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-size: 21px; 
 }
 
-/* Dropdown Button */
+header nav a:hover {
+    color: #081F5C; 
+}
+
 .dropbtn {
     background-color: transparent; 
     color: #081F5C;
@@ -74,19 +72,16 @@ header nav a:hover {
     cursor: pointer;
 }
   
-/* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
 background-color: #8a9ad5;
 border-radius: 10px;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
 position: relative;
 display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
 display: none;
 position: absolute;
@@ -98,7 +93,6 @@ border-radius: 10px;
 right: 0;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
 color: black;
 padding: 12px 16px;
@@ -107,14 +101,12 @@ display: block;
 font-size: 18px;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd;}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
 .hero-text {
-    max-width: 50%; /* Adjust width as needed */
+    max-width: 50%; 
     position: absolute;
     float: none;
     left: 50px;
@@ -140,18 +132,6 @@ font-size: 18px;
     color: #081F5C;
     padding-top: 5px;
 }
-
-/* @media (max-width: 300px) {
-    .circle {
-        max-width: 100%;
-    }
-    .heroCat {
-        max-width: 100%;
-    }
-    .hero-text {
-        max-width: 100%;
-    }
-} */
 
 .about {
     width: 100vw;
@@ -206,8 +186,6 @@ font-size: 18px;
 
 .hummingBird {
     position: relative;
-    /* left: 0px;
-    font-size: 18px; */
 }
 
 .aboutContainer {
@@ -216,7 +194,6 @@ font-size: 18px;
     align-items: center;
 }
 
-/* Media query for smaller screens */
 @media (max-width: 768px) {
     .rectangle {
         width: 90%;
@@ -238,7 +215,6 @@ font-size: 18px;
     }
 }
 
-/* Media query for extra small screens */
 @media (max-width: 480px) {
     .rectangle {
         width: 95%;
