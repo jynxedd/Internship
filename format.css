@@ -270,34 +270,107 @@ font-size: 18px;
     padding-top: 100px;
 }
 
-.contactRect1 {
+.contact-rectangle1 {
     width: 500px;
-    height: 300px;
+    height: 400px;
+    min-width: 300px;
+    min-height: 400px;
     background-color: #7096D1;
     border-radius: 50px;
     z-index: 0; 
-    text-align: right;
+    text-align: center;
+    align-items: center ;
 }
 
-.contactRect2 {
+.contact-rectangle2 {
+    display: flex;
     width: 500px;
-    height: 300px;
+    height: 400px;
+    min-width: 300px;
+    min-height: 400px;
     background-color: #081F5C;
     border-radius: 50px;
     z-index: 0; 
-    text-align: right;
-}
-
-.contactContainer {
-    display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-.contactUsText {
+.contact-us-text {
     display: flex;
-    text-align: left;
-    margin-left: 50px;
+    justify-content: space-between;
+    padding-bottom: 50px;
     font-family: 'Montserrat', sans-serif;
     color: #081F5C;
+    font-size: 5em;
+}
+
+.c1 {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.c2 {
+    display: flex;
+    align-items: baseline;
+}
+
+.c-total {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-inputs {
+    height: 60px;
+    width: 400px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: medium;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 25px;
+    color: #000000;
+    border-radius: 50px;
+}
+
+.contact-info textarea {
+    height: 100px;
+    max-height: 100px;
+    max-width: 400px;
+    min-height: 120px;
+    min-width: 400px;
+    padding-top: 15px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+}
+
+.contact-inputs:focus {
+    border: 2px solid #63cafa;
+}
+
+.contact-info button {
+    height: 30px;
+    width: 60px;
+    font-size: 13px;
+    color: #081F5C;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .contact-inputs{
+        width: 80vw;
+    } 
 }
