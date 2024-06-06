@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@400;700&family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-image: url(Images/CatPage.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.top-text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 375px;
+    padding-left: 50px;
+    padding-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+    color: #081F5C;
+}
+
+.top-text h1 {
+    font-weight: bolder;
+    font-size: 6em;
+}
+
+.pronounciation {
+    padding-top: 5px;
+    font-weight: lighter;
+    font-size: 3em;
+}
+
+.noun {
+    font-size: 3em;
+    padding-top: 2px;
+    color: #808080;
+    font-style: italic;
+}
+
+.definition {
+    font-size: 1.5em;
+    padding-top: 5px;
+    font-weight: lighter;
+}
+
+.top-text 
+
+.bottom {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F7F2EB;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
