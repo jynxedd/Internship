@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* -------------------------- INTRO PAGE -------------------------- */
@@ -383,14 +384,19 @@ font-size: 18px;
     border: 2px solid #63cafa;
 }
 
-.contact-info button {
+.button {
     height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 60px;
-    font-size: 13px;
-    color: #081F5C;
+    font-size: 1em;
+    background-color: #7096D1;
+    color: #ddd;
     border-radius: 30px;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
+    text-decoration: none;
 }
 
 @media (max-width: 800px) {
@@ -399,4 +405,254 @@ font-size: 18px;
     } 
 }
 
-/* -------------------------- DOG PAGE -------------------------- */
+/* -------------------------- DOG/CAT/BIRD PAGE -------------------------- */
+
+/* -------------------------- TOP PART (ANIMAL PIC) -------------------------- */
+
+.top {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.top-text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 375px;
+    padding-left: 50px;
+    padding-top: 130px;
+    font-family: 'Montserrat', sans-serif;
+    color: #081F5C;
+}
+
+.top-text h1 {
+    font-weight: bolder;
+    font-size: 5em;
+}
+
+.pronounciation {
+    padding-top: 5px;
+    font-weight: lighter;
+    font-size: 3em;
+}
+
+.noun {
+    font-size: 3em;
+    padding-top: 2px;
+    color: #808080;
+    font-style: italic;
+}
+
+.definition {
+    font-size: 1.5em;
+    padding-top: 5px;
+    font-weight: lighter;
+}
+
+/* -------------------------- CARD SECTION -------------------------- */
+
+.button-section {
+    background-color: #F7F2EB;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.button-section input[type=search] {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: #081F5C;
+    border-radius: 30px;
+    font-size: 17px;
+    height: 40px;
+    width: 300px;
+  }
+  
+@media screen and (max-width: 600px) {
+.button-section input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 14px;
+    width: 150px;
+    font-size: 10px;
+    border: none;
+}
+
+.button-section input[type=text] {
+    border: 1px solid #ccc;  
+}
+}
+
+.bottom {
+    width: 100vw;
+    height: auto;
+    background-color: #F7F2EB;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 50px;
+    background-color: #F7F2EB;
+}
+
+.card {
+    width: 325px;
+    background-color: #282b26;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+}
+
+.card:hover img{
+    transform: scale(.97);
+}
+
+.card-content {
+    padding: 16px;
+    color: #F5F5F5;
+}
+
+.card-content h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.card-content:hover h2{
+    color: #919191;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.card-content .btn {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    padding-top: 4px;
+    color: #F5F5F5;
+    text-decoration: none;
+}
+
+/* -------------------------- POP UP SECTION -------------------------- */
+
+.modalTwo {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #282b26;
+    display: flex;
+    width: 850px;
+    height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.modal-image {
+    height: auto;
+    width: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.modal-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.5em;
+    color: #F7F2EB;
+}
+
+.modal-header h3 {
+    margin: 0;
+    text-decoration: underline;
+}
+
+.modal-text {
+    padding: 10px 20px 20px 20px; /* Adjusted padding */
+    font-size: large;
+    color: #F7F2EB;
+    overflow-y: auto;
+    line-height: 2; /* Adjust line height for better readability */
+    flex-grow: 1;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.close {
+    color: #F7F2EB;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2rem;
+}
+
+.close:hover {
+    transform: rotate(45deg);
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+}
+
+#overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0,5);
+    z-index: -1;
+    pointer-events: none;
+} 
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
