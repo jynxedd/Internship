@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PET EXPO: BIRD</title>
     <link rel="icon" type="image/png" href="Images/cat.png">
-    <link href="bird.css" rel="stylesheet">
+    <link href="format.css" rel="stylesheet">
+    <script src="bird.js" defer></script>
+    <script src="format.js" defer></script>
 </head>
 
 <body>
-    <div class="top">
+    <div class="top" style="background-image: url(Images/BirdPage.jpg)">
         <div class="top-text">
             <h1>Birds:</h1>
             <p class="pronounciation">
@@ -27,8 +29,18 @@
 
     </div>
 
+    <div class="button-section">
+        <input type="search" id="search-bar" placeholder="Search Bird...">
+    </div>
+
     <div class="bottom">
-        <p>poo</p>
+        <!-- Card go here: -->
+        <div class="card-container" id="card-container">    
+        </div>
+
+        <!-- Popup card: -->
+        <div class="modal" id="myModal">
+        </div>
     </div>
 </body>
 </html>
