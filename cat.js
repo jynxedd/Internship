@@ -51,10 +51,10 @@ function cardDisplay(breedName,breedGroup,size,lifespan,colors,description,origi
                     <button class="close">&times;</button>
                 </div>
                 <div class="modal-text">
-                    <p>${breedName} Group: ${breedGroup}</p>
+                    <p>${breedName} Group: </p>
                     <p>${breedName} Colours: ${colors.map((color)=>color + ' ')}</p>
-                    <p>${breedName} Size:  ${size}</p>
-                    <p>${breedName} Lifespan: ${lifespan}</p>
+                    <p>${breedName} Size:  </p>
+                    <p>${breedName} Lifespan: </p>
                     <p>${breedName} Description: ${description}</p>
                     <p>${breedName} Temperament: ${temperament}</p>
                 </div>
