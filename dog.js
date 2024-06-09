@@ -1,4 +1,5 @@
 const cardContainer = document.getElementById("card-container");
+const searchBar = document.getElementById("search-bar");
 
 const breedImages = {
     "Golden Retriever": "Images/GoldenRetriever.jpg",
@@ -33,7 +34,7 @@ async function getData() {
     return openData;
 }
 
-function cardDisplay(breedName,breedGroup,size,lifespan,colors,description,origin,temperament) {
+function cardDisplay(breedName,breedGroup,size,lifespan,colors,description,temperament) {
 
     const modal = document.createElement('div');
     modal.className = 'modalTwo';
@@ -93,4 +94,33 @@ getData().then((dogArray) => {
         `;
         cardContainer.appendChild(card);
     }
+    searchBar.addEventListener('input', (e) => {
+        const searchValue = e.target.value.toLowerCase();
+        const filteredDogs = dogArray.filter(dog => dog.name.toLowerCase().includes(searchValue));
+        cardContainer.innerHTML = ''; 
+        filteredDogs.forEach(dog => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.onclick = () => cardDisplay(
+                dog.name,
+                dog.breed_group,
+                dog.size,
+                dog.lifespan,
+                dog.colors,
+                dog.description,
+                dog.origin,
+                dog.temperament
+            ); 
+
+            card.innerHTML = `
+                <img src="${breedImages[dog.name]}" alt="${dog.name}">
+                <div class="card-content">
+                    <h2>${dog.name}</h2>
+                    <h3>Origin: ${dog.origin}</h3>
+                    <a href="" class="btn">Read More...</a>
+                </div>
+            `;
+            cardContainer.appendChild(card);
+        });
+    });
 });
