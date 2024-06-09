@@ -6,10 +6,11 @@
     <title>PET EXPO: DOG</title>
     <link rel="icon" type="image/png" href="Images/cat.png">
     <link href="dog.css" rel="stylesheet">
+    <script src="dog.js" defer></script>
 </head>
 
 <body>
-    <div class="top">
+    <div class="top" id="DOG">
         <div class="top-text">
             <h1>Dogs:</h1>
             <p class="pronounciation">
@@ -27,8 +28,21 @@
 
     </div>
 
-    <div class="bottom">
-        <p>poo</p>
+    <div class="button-section">
+        <input type="text" placeholder="Search Dog...">
     </div>
+
+    <div class="bottom">
+
+        <!-- Card go here: -->
+        <div class="card-container" id="card-container">    
+        </div>
+
+        <!-- Popup card: -->
+        <div class="modal" id="myModal">
+        </div>
+        <!-- <div id="overlay"></div> -->
+    </div>
+
 </body>
 </html>
