@@ -33,36 +33,35 @@ async function getData() {
     return openData;
 }
 
-function test(breedName,breedGroup,size,lifespan,colors,description,origin,temperament) {
-    console.log(breedName,breedGroup,size,lifespan,colors,description,origin,temperament);
+function cardDisplay(breedName,breedGroup,size,lifespan,colors,description,origin,temperament) {
 
     const modal = document.createElement('div');
     modal.className = 'modalTwo';
     modal.style.display = 'flex'; 
     const currModal = `
-             <div class="modal-content">
-                 <div class="modal-image">
-                     <img src="${breedImages[breedName]}" alt="DOG NAME">
-                 </div>
-                 <div class="right">
-                     <div class="modal-header">
-                         <h3>Additional Information</h3>
-                         <button class="close">&times;</button>
-                     </div>
-                     <div class="modal-text">
-                         <p>Breed Group: ${breedGroup}</p>
-                         <p>Breed Colours: ${colors.map((color)=>color + ' ')}</p>
-                         <p>Breed Size:  ${size}</p>
-                         <p>Breed Lifespan: ${lifespan}</p>
-                         <p>Breed Description:${description}</p>
-                         <p>Breed Temperament: ${temperament}</p>
-                     </div>
-                 </div>
-             </div>
-     `;
-     modal.innerHTML = currModal
-     document.body.appendChild(modal);
-     modal.querySelector('.close').onclick = () => {
+        <div class="modal-content">
+            <div class="modal-image">
+                <img src="${breedImages[breedName]}" alt="${breedName}">
+            </div>
+            <div class="right">
+                <div class="modal-header">
+                    <h3>Additional Information</h3>
+                    <button class="close">&times;</button>
+                </div>
+                <div class="modal-text">
+                    <p>${breedName} Group: ${breedGroup}</p>
+                    <p>${breedName} Colours: ${colors.map((color)=>color + ' ')}</p>
+                    <p>${breedName} Size:  ${size}</p>
+                    <p>${breedName} Lifespan: ${lifespan}</p>
+                    <p>${breedName} Description: ${description}</p>
+                    <p>${breedName} Temperament: ${temperament}</p>
+                </div>
+            </div>
+        </div>`;
+
+    modal.innerHTML = currModal
+    document.body.appendChild(modal);
+    modal.querySelector('.close').onclick = () => {
         modal.style.display = 'none'; 
     };
 }
@@ -82,7 +81,7 @@ getData().then((dogArray) => {
         // Create card element
         const card = document.createElement('div');
         card.className = 'card';
-        card.onclick = ()=>test(breedName,breedGroup,size,lifespan,colors,description,origin,temperament); // Assign the test function to the onclick event
+        card.onclick = ()=>cardDisplay(breedName,breedGroup,size,lifespan,colors,description,origin,temperament); // Assign the test function to the onclick event
 
         card.innerHTML = `
             <img src="${imageUrl}" alt="${dogArray[i].name}">
@@ -92,9 +91,6 @@ getData().then((dogArray) => {
                 <a href="" class="btn">Read More...</a>
             </div>
         `;
-
         cardContainer.appendChild(card);
-
-        
     }
 });
