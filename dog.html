@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PET EXPO: DOG</title>
     <link rel="icon" type="image/png" href="Images/cat.png">
-    <link href="dog.css" rel="stylesheet">
+    <link href="format.css" rel="stylesheet">
     <script src="dog.js" defer></script>
+    <script src="format.js" defer></script> 
 </head>
 
 <body>
-    <div class="top" id="DOG">
+    <header>
+        <img src="Images/cat.png" alt="Cat Logo">
+        <nav>
+            <a href="home.html#CONTACT">Contact Us</a>
+            <a href="home.html#ABOUT">About Us</a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Animals</button>
+                <div id="myDropdown" class="dropdown-content">
+                <a href="cat.html">Cat</a>
+                <a href="dog.html">Dog</a>
+                <a href="bird.html">Bird</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="top" style="background-image: url(Images/DogPage.jpg);">
         <div class="top-text">
             <h1>Dogs:</h1>
             <p class="pronounciation">
@@ -29,11 +46,10 @@
     </div>
 
     <div class="button-section">
-        <input type="text" placeholder="Search Dog...">
+        <input type="search" id="search-bar" placeholder="Search Dog...">
     </div>
 
     <div class="bottom">
-
         <!-- Card go here: -->
         <div class="card-container" id="card-container">    
         </div>
@@ -41,7 +57,6 @@
         <!-- Popup card: -->
         <div class="modal" id="myModal">
         </div>
-        <!-- <div id="overlay"></div> -->
     </div>
 
 </body>
