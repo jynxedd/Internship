@@ -55,7 +55,7 @@ async function getData() {
     return openData;
 }
 
-function cardDisplay(breedName,description,place_of_found,habitat,diet,family,species,weight_kg,wingspan_cm) {
+function cardDisplay(breedName,description,place_of_found,habitat,diet,family,species,weight_kg,wingspan_cm, origin) {
 
     const modal = document.createElement('div');
     modal.className = 'modalTwo';
@@ -102,6 +102,7 @@ getData().then((birdArray) => {
         const weight_kg = birdArray[i].weight_kg
         const wingspan_cm = birdArray[i].wingspan_cm
         const description = birdArray[i].description
+        const origin = birdArray[i].origin
     
         // Create card element
         const card = document.createElement('div');
@@ -112,7 +113,7 @@ getData().then((birdArray) => {
             <img src="${imageUrl}" alt="${birdArray[i].name}">
             <div class="card-content">
                 <h2>${birdArray[i].name}</h2>
-                <h3>Origin: ${birdArray[i].origin}</h3>
+                <h3>Can be found: ${birdArray[i].place_of_found}</h3>
                 <h3>Read More...</h3>
             </div>
         `;
